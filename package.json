@@ -1,0 +1,22 @@
+{
+  "name": "tidelift-webhook-receiver-sample-app",
+  "version": "0.0.1",
+  "description": "tidelift webhook sample receiver",
+  "author": "Jeremy Katz <jeremy@tidelift.com>",
+  "private": true,
+  "scripts": {
+    "lint": "yarn run eslint index.js",
+    "fix": "yarn run eslint --fix index.js",
+    "deploy": "gcloud functions deploy webhook-sample --entry-point hook --runtime nodejs12 --trigger-http --allow-unauthenticated"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
